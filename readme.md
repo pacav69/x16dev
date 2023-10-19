@@ -54,5 +54,5 @@ ship trader
 high scores saved
 letter of players name
 ladder
-screen shot of g=high score
+screen shot of high score
 
