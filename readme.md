@@ -2,6 +2,7 @@
 # commandeer x16 development
 
 # ideas
+[List_of Apple II games](https://en.wikipedia.org/wiki/List_of_Apple_II_games)
 
 uckers
 
@@ -13,7 +14,7 @@ tetris
 
 music construction
 
-leasure suit
+Leisure Suit
 
 where in the world
 
