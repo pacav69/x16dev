@@ -47,3 +47,11 @@ pong
 galaxian
 
 
+
+# scores
+
+high scores saved
+letter of players name
+ladder
+screen shot of g=high score
+
