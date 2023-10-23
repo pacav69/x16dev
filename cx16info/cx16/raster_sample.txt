@@ -1,0 +1,92 @@
+main:
+  +vpoke $0f0004,$08 ; create an 8 pixel left border so we can change the colour to show raster IRQ position
+  sei
+  lda $0314
+  sta sys_irq3+1
+  lda $0315
+  sta sys_irq3+2
+  lda #<irq2ras1
+  sta $0314
+  lda #>irq2ras1
+  sta $0315
+  lda #2
+  sta $9f26           ; Enable LINE IRQ
+  sta $9f27           ; Ack LINE IRQ
+  +vpoke $1f0009,120  ; First raster line position
+  lda #0
+  sta veradat
+  cli
+  ; this piece of code is the 'tele-type' routine
+-
+  lda msg_timer       ; wait for a frame counter to reach zero
+  bne -
+getchar:
+  lda msg
+  beq +               ; branch if 0 i.e. end of message reached
+  jsr $FFD2           ; Kernal routine to print a character to the screen
+  lda #3              ; reset the frame counter
+  sta msg_timer
+  inc getchar+1       ; get ready for next har to print
+  bne -
+  inc getchar+2       ; hi byte
+  jmp -               ; go round tele type loop again
+  + 
+  
+  jmp *
+  
+  irq2ras1:
+  +vpoke $0f0003,0    ; Set border black
+  +vpoke $0f0001,64   ; Change HSCALE x 2
+  +vpoke $1f1002,$f   ; Palette colour 2 with auto inc for VERA
+  sta veradat
+  lda #<irq2ras2      ; address code will we run on second raster line position
+  sta $0314
+  lda #>irq2ras2
+  sta $0315
+  lda #2              ; ACK line IRQ
+  sta $9f27
+  +vpoke $1f0009,192  ; second raster line position,i.e. which scan line we want the interrup to fire on
+  lda #0              ; Hi byte for raster scan line
+  sta veradat
+  
+  lda msg_timer
+  beq +
+  dec msg_timer       ; a simple framer counter to sync the speed of the 'tele type' routine outside the IRQs
++
+  pla
+  tay
+  pla
+  tax
+  pla
+  rti                 ; Leave interrupt
+irq2ras2:
+  +vpoke $0f0003,23   ;Set Border colour to grey
+  +vpoke $0f0001,128  ;Set HSCALE back to x 1
+  +vpoke $1f1002,255  ;Set Palette colour to purple
+  lda #<irq2ras1      ;Repoint IRQ to our 1st routine which will start at scanline #120
+  sta $0314
+  lda #>irq2ras1
+  sta $0315
+  lda #2              ; Ack LINE irq
+  sta $9f27
+  +vpoke $1f0009,120  ; Set raster line Lo byte position
+  lda #0              ; Hi byte
+  sta veradat
+sys_irq3:
+  jmp $ffff           ; service Kernal IRQ call
+
+msg_timer:
+!BYTE 50              ; start tele type after 50 frames, i.e. 1 second
+msg:
+!TEXT "A VERY SIMPLE RASTER INTERRUPT EXAMPLE:",$0d,$0d
+!TEXT "AT SCANLINE 120 THE LEFT BORDER COLOUR SET TO BLACK AND...",$0d,$0d
+!TEXT "THE HSCALE IS SET TO 64 (X2) AND",$0d
+!TEXT "THE TEXT PALETTE",$0d,$0d,"COLOUR IS SET TO",$0d,$0d,"PURPLE....",$0d,"AND VERY NICE IT IS TOO!",$0d
+!TEXT $0d
+!TEXT $0d
+!TEXT $0d
+!TEXT "NOW AT LINE 192 WE SET THE BORDER COLOUR TO GREY",$0d
+!TEXT "RESTORE THE TEXT PALETTE COLOUR TO WHITE",$0d
+!TEXT "AND HSCALE IS BACK TO 128 (X1)",$0d
+!TEXT $0d
+!TEXT "DONE....",$0d,$0d,":)",$0d,$0d,"19/10/2019",$0d,0

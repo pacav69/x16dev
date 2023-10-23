@@ -1,6 +1,7 @@
 # x16dev
 # commandeer x16 development
 
+ref manual [here](https://github.com/x16community/x16-docs)
 # ideas
 [List_of Apple II games](https://en.wikipedia.org/wiki/List_of_Apple_II_games)
 
