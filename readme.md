@@ -2,8 +2,9 @@
 
 ## Videos and tutorials
 * ChibiAkumas  [here](https://www.youtube.com/@ChibiAkumas)
+* ChibiAkumas website [here](https://www.assemblytutorial.com/)
 * TheRetroDesk [here](https://www.youtube.com/watch?v=gqwIzbT_WFU&ab_channel=TheRetroDesk)
-TheRetroDesk github files  [here](https://github.com/SlithyMatt/x16-assembly-tutorial)
+* TheRetroDesk github files  [here](https://github.com/SlithyMatt/x16-assembly-tutorial)
 
 
 ## Set up enviroment
