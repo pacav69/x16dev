@@ -8,7 +8,10 @@
             "type": "shell",
             "command": "d://ppApps//acme//acme.exe -o ${fileBasenameNoExtension}.prg ${file}",
             "problemMatcher": [],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "x16: run x16 emulator with file ",
@@ -22,10 +25,7 @@
                 "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         }
     ]
 }
