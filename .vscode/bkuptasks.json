@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "acme: Compile and Link Current File",
+            "type": "shell",
+            "command": "d://ppApps//acme//acme.exe  -o testing.prg ${file}",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "run x16 emulator with testing.prg file ",
+            "command": "D://workspace//commanderx16emu//x16emu.exe",
+            "args": [
+                "-prg testing.prg"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

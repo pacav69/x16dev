@@ -6,7 +6,7 @@
 
 ; Tell ACME what to name the file and what format it is
 ; CX16 uses Commodore format
-!to "bitmap.prg", cbm
+; !to "bitmap.prg", cbm
 
 ;***************************
 ; Define Constants
@@ -42,14 +42,14 @@ init:
     lda #$10
     ldx #$00
     ldy #$00
-    
+
     sta VERA_ADDR_HI
     stx VERA_ADDR_MID
     sty VERA_ADDR_LO
 
     lda #1
     sta VERA_DATA1
-    
+
     ldx #$88
     ldy #0
     lda #<bitmap+2
@@ -116,23 +116,23 @@ loop1:
     ; 7	            Bitmap mode 8bpp
     ;*****************************************************************************************************
     lda #6 << 5 | 1                             ; 4bpp Bitmap Mode (Bit 7,6,5 = 6)
-    sta VERA_DATA1              
+    sta VERA_DATA1
 
     lda #0                                      ; TileW = 320
-    sta VERA_DATA1          
+    sta VERA_DATA1
     sta VERA_DATA1                              ; Map_Base_L not used
     sta VERA_DATA1                              ; Map_Base_H not used
 
-    lda #<bitmap                                
+    lda #<bitmap
     sta VERA_DATA1
     lda #>bitmap
     sta VERA_DATA1
 
-    
+
 gameloop:
     jmp *                           ; Infinite loop
     rts                             ; Back to OS
 
-*=$6000 
+*=$6000
 bitmap:
-    !bin "danica.kla"
+    // !bin "danica.kla"
