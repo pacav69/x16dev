@@ -1,4 +1,4 @@
-
+@REM acme.cmd file
 @echo off
 cls
 color 0a
@@ -9,6 +9,6 @@ color 0a
 FOR %%i IN (C D E F G H I J K L M N O P Q R S T U V W X Y Z) DO IF EXIST "%%i:\ppApps\acme\acme.exe" (SET acme="%%i:\ppApps\acme\acme.exe"& goto doitnow)
 
 :doitnow
-
-
+echo.
 echo acme = %acme%
+echo.

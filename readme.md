@@ -6,6 +6,8 @@
 * TheRetroDesk [here](https://www.youtube.com/watch?v=gqwIzbT_WFU&ab_channel=TheRetroDesk)
 * TheRetroDesk github files  [here](https://github.com/SlithyMatt/x16-assembly-tutorial)
 
+## Visual Studio Code extentions
+ C64 [here](https://marketplace.visualstudio.com/items?itemName=gverduci.c64basicv2)
 
 ## Set up enviroment
 
@@ -39,6 +41,9 @@ Description: Provides language support for the ca65 macro assembler.
 Version: 1.2.4
 Publisher: Cole Campbell
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tlgkccampbell.code-ca65
+
+
+
 
 
 select test.asm ffile
