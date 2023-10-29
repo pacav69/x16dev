@@ -5,6 +5,7 @@
 * ChibiAkumas website [here](https://www.assemblytutorial.com/)
 * TheRetroDesk [here](https://www.youtube.com/watch?v=gqwIzbT_WFU&ab_channel=TheRetroDesk)
 * TheRetroDesk github files  [here](https://github.com/SlithyMatt/x16-assembly-tutorial)
+* Commander X16 Assembly Project Setup [here](https://www.youtube.com/watch?v=V2vGiIqDXkA&ab_channel=JestinStoffel)
 
 ## Visual Studio Code extentions
  C64 [here](https://marketplace.visualstudio.com/items?itemName=gverduci.c64basicv2)
