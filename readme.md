@@ -6,6 +6,7 @@
 * TheRetroDesk [here](https://www.youtube.com/watch?v=gqwIzbT_WFU&ab_channel=TheRetroDesk)
 * TheRetroDesk github files  [here](https://github.com/SlithyMatt/x16-assembly-tutorial)
 * Commander X16 Assembly Project Setup [here](https://www.youtube.com/watch?v=V2vGiIqDXkA&ab_channel=JestinStoffel)
+* Commander X16 6502 Assembly Language Dev Setup [here](https://www.youtube.com/watch?v=oz3E6pGU2KE&ab_channel=Spriteworx)
 
 ## Visual Studio Code extentions
  C64 [here](https://marketplace.visualstudio.com/items?itemName=gverduci.c64basicv2)
