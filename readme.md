@@ -10,6 +10,7 @@
 
 ## Visual Studio Code extentions
  C64 [here](https://marketplace.visualstudio.com/items?itemName=gverduci.c64basicv2)
+ kick-assembler [here](https://marketplace.visualstudio.com/items?itemName=paulhocker.kick-assembler-vscode-ext)
 
 ## Set up enviroment
 
@@ -18,11 +19,32 @@
 * forum [here](https://www.commanderx16.com/forum)
 * Commander x16 emulator [here](https://github.com/x16community/x16-emulator)
 
+# C64 References
+from [here](https://github.com/X16Community/x16-docs/issues/83)
+cbmdocs [here](https://sta.c64.org/cbmdocs.html)
+
+
+cbm64krnfunc  [here](http://sta.c64.org/cbm64krnfunc.html)
+c64kernalrom  [here](https://c64os.com/post/c64kernalrom) pretty good writeup with explanations
+c64ref (https://www.pagetable.com/c64ref/kernal/)
+
+Here's some more, courtesy of @JimmyDansbo :
+ c64-kernal-routines [here]https://www1.cx16.dk/c64-kernal-routines/
+ c128-kernal-routines [here]https://www1.cx16.dk/c128-kernal-routines/
+
+ 6502opcodes [here](http://6502.org/tutorials/6502opcodes.html)
+ 65c02opcodes [here](http://www.6502.org/tutorials/65c02opcodes.html)
+
+Maybe less useful on the x16:
+s [here](https://www.pagetable.com/c64ref/c64disasm/)
+s [here](https://project64.c64.org/Software/mapc6411.txt)
+
 ### Assemblers
 
 * Acme cross assembler for windows [here](https://sourceforge.net/projects/acme-crossass/files/win32/acme0.97win.zip/download)
 
 * cc65 compiler [here](https://cc65.github.io/)
+* KickAssembler [here]( http://theweb.dk/KickAssembler/Main.html#frontpage)
 
 * KickAssembler  [here](http://www.theweb.dk/KickAssembler/KickAssembler.zip)
 *
@@ -68,7 +90,24 @@ then enter
 
 ## Using Acme
 
-* open file
+select test.asm ffile
+press control+shift+p
+type
+    configure default build task
+
+then press enter
+select
+     acme: Compile and Link Current File
+
+this opens a task.json file
+
+to run type
+
+    run default build task
+
+then press enter
+
+* or open the following file:
 
     .vscode\tasks.json
 
@@ -80,8 +119,10 @@ edit the path to acme.exe
 
     "command": "c://path//to//acme.exe  -o ${fileBasenameNoExtension}.prg ${file}",
 
-tis will compile the current selected file
+this will compile the current selected file
 the -o is the output file located in the base
+
+
 
 
 

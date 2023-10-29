@@ -1,0 +1,6 @@
+{
+    "executable": ".\\bin\\acme.exe",
+    "input": "main.asm",
+    "params": "--verbose"
+}
+

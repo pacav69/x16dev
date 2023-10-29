@@ -6,7 +6,7 @@
 
 ; Tell ACME what to name the file and what format it is
 ; CX16 uses Commodore format
-; !to "bitmap.prg", cbm
+!to "bitmap.prg", cbm
 
 ;***************************
 ; Define Constants
@@ -135,4 +135,4 @@ gameloop:
 
 *=$6000
 bitmap:
-    // !bin "danica.kla"
+ !bin "danica.kla"

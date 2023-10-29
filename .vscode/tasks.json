@@ -6,7 +6,7 @@
         {
             "label": "acme: Compile and Link Current File",
             "type": "shell",
-            "command": "d://ppApps//acme//acme.exe -o ${fileBasenameNoExtension}.prg ${file}",
+            "command": "d://ppApps//acme//acme.exe  -f cbm -o ${fileBasenameNoExtension}.PRG ${file}",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
