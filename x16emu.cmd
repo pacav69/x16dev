@@ -1,4 +1,5 @@
 @REM x16emu.cmd file
+@REM checks for the existance of x16emu portable ppapp
 @echo off
 cls
 color 0a

@@ -1,4 +1,5 @@
 @REM acme.cmd file
+@REM checks for the existance of acme portable ppapp
 @echo off
 cls
 color 0a
