@@ -1,0 +1,35 @@
+################################################################################
+# BUILD FILE
+# generated file: DO NOT EDIT!
+################################################################################
+
+ninja_required_version = 1.3
+toolkit = acme
+builddir = d$:\workspace\x16dev\build
+
+project = x16dev
+config = d$:\workspace\x16dev\project-config.json
+target = d$:\workspace\x16dev\build\x16dev.prg
+dbg_out = d$:\workspace\x16dev\build\x16dev.report
+python_exe = c$:\Users\User\.vscode\extensions\rosc.vs64-2.4.5\resources\python\python.exe
+java_exe = java
+rc_exe = c$:\Users\User\.vscode\extensions\rosc.vs64-2.4.5\tools\rc.py
+rc_flags = --format acme --config "$config"
+asm_exe = acme
+
+flags = --msvc --maxerrors 99 -DDEBUG=1 -f cbm --cpu 6510
+includes = -I d$:\workspace\x16dev -I d$:\workspace\x16dev\bin\acme\contrib\toacme\src -I d$:\workspace\x16dev\examples\cx16-maze-master -I d$:\workspace\x16dev\examples\x16-demo-master\assembly -I d$:\workspace\x16dev\examples\x16-demo-master\assembly\x16-matriculate-text -I d$:\workspace\x16dev\examples\x16-demo-master\basic-sprite -I d$:\workspace\x16dev\build
+
+rule res
+    command = $python_exe $rc_exe $rc_flags -o $out $in
+
+rule asm
+    depfile = $out.d
+    deps = gcc
+    command = $asm_exe $flags $includes -r "$dbg_out" -o $out $in
+
+
+build $target | $dbg_out : asm d$:\workspace\x16dev\asm\acmeassembler\cx16-maze-0.4\cx16maze.asm d$:\workspace\x16dev\asm\examplasm.s d$:\workspace\x16dev\asm\main.asm d$:\workspace\x16dev\DevEnvironmentDemo\demo.s d$:\workspace\x16dev\examples\bitmap.asm d$:\workspace\x16dev\examples\cx16-maze-master\cmaze.asm d$:\workspace\x16dev\examples\cx16-maze-master\cx16maze.asm d$:\workspace\x16dev\examples\cx16-maze-master\mazes.asm d$:\workspace\x16dev\examples\cx16-maze-master\x16maze.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\kick-assembler\typing.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\mode4-demo.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\mode7-demo.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\mylife.s d$:\workspace\x16dev\examples\x16-demo-master\assembly\sprite-demo.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\x16-matriculate-text\matriculate.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\x16-matriculate-text\matriculate_vars.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\x16-matriculate-text\system.asm d$:\workspace\x16dev\examples\x16-demo-master\assembly\x16-matriculate-text\system_vars.asm d$:\workspace\x16dev\examples\x16-demo-master\petdrawx16\petdrawx16.asm
+
+build all: phony $target
+default all

@@ -1,4 +1,5 @@
 # todo list
+
 make a script to search and run emulator with prg or bas
 script to compile wwith kickass assembler
 create a menu script to select file and select compiler
@@ -10,5 +11,5 @@ research "depends on" in tasks.json
 add ascii table document
 add 65c02 look up table
 develop example scripts
-
-
+add to path script for files cl65, acme and x16emu script
+script to detect extentiion and add -prg  or -bas to x16emu command line
