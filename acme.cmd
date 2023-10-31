@@ -1,3 +1,10 @@
+@REM /*
+@REM  * @Author: LastOS-Pacav
+@REM  * @Date: 2023-10-31 23:27:30
+@REM  * @Last Modified by:   LastOS-Pacav
+@REM  * @Last Modified time: 2023-10-31 23:27:30
+@REM  */
+
 @REM acme.cmd file
 @REM checks for the existance of acme portable ppapp
 @echo off
