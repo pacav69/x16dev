@@ -1,4 +1,5 @@
 ; acme -f cbm -o cx16maze.prg cx16-maze.asm
+
 !zone Main {
 *=$0801			; Assembled code should start at $0801
 			; (where BASIC programs start)

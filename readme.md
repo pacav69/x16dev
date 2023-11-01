@@ -9,7 +9,7 @@
 * Commander X16 Assembly Project Setup [here](https://www.youtube.com/watch?v=V2vGiIqDXkA&ab_channel=JestinStoffel)
 * Commander X16 6502 Assembly Language Dev Setup [here](https://www.youtube.com/watch?v=oz3E6pGU2KE&ab_channel=Spriteworx)
 
-## Visual Studio Code extentions
+## Visual Studio Code extensions
 
  C64 [here](https://marketplace.visualstudio.com/items?itemName=gverduci.c64basicv2)
  kick-assembler [here](https://marketplace.visualstudio.com/items?itemName=paulhocker.kick-assembler-vscode-ext)
@@ -20,25 +20,25 @@ setx commands  [here](https://learn.microsoft.com/en-us/previous-versions/window
 
 environment-variable-ref  [here](https://stackoverflow.com/questions/9546324/adding-a-directory-to-the-path-environment-variable-in-windows)
 
-## Set up enviroment
+## Set up environment
 
 ### Commander x16
 
-* refetence  manual [here](https://github.com/x16community/x16-docs)
+* reference  manual [here](https://github.com/x16community/x16-docs)
 * forum [here](https://www.commanderx16.com/forum)
 * Commander x16 emulator [here](https://github.com/x16community/x16-emulator)
 
 ## C64 References
 
 from [here](https://github.com/X16Community/x16-docs/issues/83)
-cbmdocs [here](https://sta.c64.org/cbmdocs.html)
+cbm docs [here](https://sta.c64.org/cbmdocs.html)
 
 cbm64krnfunc  [here](http://sta.c64.org/cbm64krnfunc.html)
-c64kernalrom  [here](https://c64os.com/post/c64kernalrom) pretty good writeup with explanations
+c64 kernal rom  [here](https://c64os.com/post/c64kernalrom) pretty good writeup with explanations
 c64ref  [here](https://www.pagetable.com/c64ref/kernal/)
 
 Here's some more, courtesy of @JimmyDansbo :
- c64-kernal-routines [here](https://www1.cx16.dk/c64-kernal-routines/)
+ c64 kernal routines [here](https://www1.cx16.dk/c64-kernal-routines/)
  c128-kernal-routines [here](https://www1.cx16.dk/c128-kernal-routines/)
 
  6502opcodes [here](http://6502.org/tutorials/6502opcodes.html)
@@ -96,7 +96,7 @@ then enter
 
 ## Using Acme
 
-select test.asm ffile
+select test.asm file
 press control+shift+p
 type
     configure default build task
