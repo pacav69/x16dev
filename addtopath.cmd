@@ -19,6 +19,14 @@ acme=path
 cl65=path
 x16emu script=path
 
+@REM ref https://ss64.com/nt/path.html
+@REM SetX MYAPP "C:\Program Files\My App" -m
+
+@REM setup additional paths
+@REM set sc=Source.Code
+@REM set path=%path%;%~dp0bin;%~dp0%sc%\Tools;%~dp0%sc%\Tools\_x86
+
+@REM https://stackoverflow.com/questions/19287379/how-do-i-add-to-the-windows-path-variable-using-setx-having-weird-problems
 
 @echo off
 set OWNPATH=%~dp0
