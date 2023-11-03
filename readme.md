@@ -130,4 +130,6 @@ edit the path to acme.exe
 * this will compile the current selected file
 * the -o is the output file located in the base
 
-https://www.youtube.com/watch?v=DNf6Bu7z4vw&ab_channel=DevtipsbyMoHo
+DevtipsbyMoH [here] (https://www.youtube.com/watch?v=DNf6Bu7z4vw&ab_channel=DevtipsbyMoHo)
+
+retro-code [here]((https://gitlab.com/retro-coder/commanderx16)
