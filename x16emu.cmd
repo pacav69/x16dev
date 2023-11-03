@@ -11,6 +11,8 @@ FOR %%i IN (C D E F G H I J K L M N O P Q R S T U V W X Y Z) DO IF EXIST "%%i:\p
 
 @REM d:\ppApps\x16emu\x16emu.exe -run -prg
 :doitnow
+@REM added the program to the path
+
 
 echo.
 echo x16emu = %x16emu%

@@ -56,3 +56,32 @@ if ERRORLEVEL 1 (
     )
   )
 )
+
+
+
+@REM %%%%%%%%%%%%%%%
+
+https://stackoverflow.com/questions/18701783/windows-equivalent-of-export
+
+To translate your *nix style command script to windows/command batch style it would go like this:
+
+SET PROJ_HOME=%USERPROFILE%/proj/111
+SET PROJECT_BASEDIR=%PROJ_HOME%/exercises/ex1
+mkdir "%PROJ_HOME%"
+
+
+https://copyprogramming.com/howto/windows-equivalent-of-export#windows-command-line-alternative-for-export
+
+
+@setlocal enableextensions enabledelayedexpansion
+@echo off
+set MinGWmsys=%CD%\tools\MinGW\msys\1.0\bin;
+set lpath=%PATH%
+if not "!lpath:%MinGWmsys%=!" == "%lpath%" (
+echo PATH already contained %MinGWmsys%
+) else (
+echo Adding %MinGWmsys% to PATH
+setx PATH "%MinGWmsys%;%PATH%"
+)
+endlocal
+W
