@@ -9,10 +9,7 @@
             "type": "shell",
             "command": "d://ppApps//acme//acme.exe  -f cbm -o ${fileBasenameNoExtension}.PRG ${file}",
             "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         },
         {
             "label": "x16: run x16 emulator with file ",
@@ -27,6 +24,18 @@
             },
             "problemMatcher": [],
             "group": "build"
+        },
+        {
+            "type": "vs64",
+            "action": "build",
+            "problemMatcher": [
+                "$msvc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "label": "vs64: build"
         }
     ]
 }

@@ -1,5 +1,18 @@
 {
-    "recommendations": [
-        "bastianccm.vscode-acme"
-    ]
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+	//use "${publisher}.${name}" surromded by " example2 seperate each with a comma
+	// ["ms-dotnettools.csharp","rosc.vs64"],
+	// tp get Extension use copy extension ID on the extension
+	// use @recommended to find fir the wirkspace
+
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations":
+	["rosc.vs64","entan-gl.cc65-vice","paulhocker.kick-assembler-vscode-ext","Vrokin.x16-kickass","yazwh0.bitmagic"],
+
+
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": [
+
+	]
 }
