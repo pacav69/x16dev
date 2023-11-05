@@ -15,7 +15,7 @@ python_exe = c$:\Users\User\.vscode\extensions\rosc.vs64-2.4.5\resources\python\
 java_exe = java
 rc_exe = c$:\Users\User\.vscode\extensions\rosc.vs64-2.4.5\tools\rc.py
 rc_flags = --format acme --config "$config"
-asm_exe = D$:\workspace\acme\acme.exe\acme.exe
+asm_exe = D$:\workspace\x16devproject\bin\acme.exe\acme.exe
 
 flags = --msvc --maxerrors 99 -DDEBUG=1 -f cbm --cpu 6510
 includes = -I d$:\workspace\x16dev -I d$:\workspace\x16dev\bin\acmeinfo\contrib\toacme\src -I d$:\workspace\x16dev\examples\cx16-maze-master -I d$:\workspace\x16dev\x16-demo-master\assembly -I d$:\workspace\x16dev\x16-demo-master\assembly\x16-matriculate-text -I d$:\workspace\x16dev\x16-demo-master\basic-sprite -I d$:\workspace\x16dev\build

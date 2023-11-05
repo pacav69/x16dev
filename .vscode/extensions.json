@@ -8,7 +8,7 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations":
-	["rosc.vs64","entan-gl.cc65-vice","paulhocker.kick-assembler-vscode-ext","Vrokin.x16-kickass","yazwh0.bitmagic"],
+	["rosc.vs64","entan-gl.cc65-vice","paulhocker.kick-assembler-vscode-ext","Vrokin.x16-kickass","yazwh0.bitmagic","streetsidesoftware.code-spell-checker","vscode-infra.image-viewer","shd101wyy.markdown-preview-enhanced","slevesque.vscode-multiclip","ionutvmi.path-autocomplete"],
 
 
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
